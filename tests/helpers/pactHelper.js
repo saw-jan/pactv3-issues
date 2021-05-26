@@ -5,8 +5,8 @@ const provider = new PactV3({
   consumer: 'client',
   provider: 'server',
   port: 1234,
-  dir: path.resolve(__dirname, 'pacts'),
-  log: path.resolve(__dirname, 'logs', 'pact.log'),
+  dir: path.resolve(process.cwd(), 'tests', 'pacts'),
+  log: path.resolve(process.cwd(), 'tests', 'logs', 'pact.log'),
   logLevel: 'debug',
 })
 

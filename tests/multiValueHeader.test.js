@@ -23,13 +23,13 @@ describe('request', () => {
       })
   }
 
-  it('get request', () => {
-    aGETInfoInteraction(provider)
+  it('get request', async () => {
+    await aGETInfoInteraction(provider)
     return provider.executeTest(() => {
       return client
         .getApi()
         .then((res) => {
-          console.log(res)
+          console.log(res.data)
         })
         .catch((err) => {
           console.log(err)
